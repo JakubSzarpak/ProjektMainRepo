@@ -5,10 +5,12 @@
 
 }
 
-#mainContent {
+/* Blur background on landig to fix - 1.via class add 2.via onclick function 3.via jquery */
 
-  z-index: 10!important;
+.blurBG:not(#loginPopup) {
 
+  filter: blur(5px)!important;
+  z-index: 9000!important;
 }
 
 #mainNav {
@@ -95,7 +97,7 @@
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 9999;
-  filter: none;
+  filter: none!important;
 }
 
 
@@ -195,6 +197,7 @@
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   filter: none!important;
+  z-index: 9999!important;
 }
 
 #label11 {

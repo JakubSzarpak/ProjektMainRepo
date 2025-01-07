@@ -2,28 +2,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const loginButton = document.getElementById("loginButton");
   const closeButton = document.getElementById("closeButton");
   const loginPopup = document.getElementById("loginPopup");
+  const bodyJS = document.getElementById("OverLayBlr");
+ 
   
 
   // Open popup
   loginButton.addEventListener("click", () => {
-    loginPopup.classList.add("show")
-    
+    loginPopup.classList.add("show");
+    bodyJS.classList.add("blurBG");
   });
 
   // Close popup
   closeButton.addEventListener("click", () => {
-    loginPopup.classList.remove("show")
-    
+    loginPopup.classList.remove("show");
+    bodyJS.classList.remove("blurBG");
   });
 
   // Close popup when clicking outside the content
   window.addEventListener("click", (event) => {
     if (event.target === loginPopup) {
       loginPopup.classList.remove("show");
-      
+      bodyJS.classList.remove("blurBG");
     }
   });
 });
+
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
